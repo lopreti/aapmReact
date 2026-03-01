@@ -1,0 +1,302 @@
+:root {
+    /* Cores principais */
+    --blue: #3B82F6;
+    --back-blue: #1E40AF;
+    --dark-blue: #0A1E52;
+    --light-blue: #1E3A8A;
+    --white: #FFFFFF;
+
+    /* Tema claro (padrão) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+
+    /* Backgrounds */
+    --background-light: url("../images/fundo-tela.svg");
+    --background-dark: url("../images/fundo-tela-dark.svg");
+
+    /* Transições */
+    --transition: 0.3s ease;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* ========== DARK MODE ========== */
+body.dark-mode {
+    --bg-primary: var(--dark-blue);
+    --bg-secondary: var(--light-blue);
+    --bg-card: var(--dark-blue);
+    --text-primary: var(--white);
+    --text-secondary: #CBD5E1;
+    --border-color: #334155;
+    --background-light: var(--background-dark);
+}
+
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== BASE ========== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../images/fundo-tela.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    transition: background-color var(--transition), color var(--transition);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark-mode {
+    background-image: url("../images/fundo-tela-dark.svg");
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+.dark-mode a:hover {
+    color: var(--white);
+}
+
+/* ========== ÍCONES ========== */
+.material-symbols-outlined {
+    color: white;
+}
+
+/* ========== FORMULÁRIOS ========== */
+
+/* Inputs e Selects */
+.input-box input,
+.info-input,
+.select-box select,
+.form-control {
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 18px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: all var(--transition);
+}
+
+.form-control::placeholder,
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus,
+.select-box select:focus,
+.input-box input:focus {
+    background-color: rgba(30, 58, 138, 0.85);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+    border: 2px solid rgba(147, 197, 253, 0.8);
+    color: white;
+}
+
+/* Select customizado */
+.select-box {
+    position: relative;
+}
+
+.select-box select {
+    appearance: none;
+}
+
+/* Dark mode - Inputs */
+.dark-mode .form-control,
+.dark-mode .input-box input,
+.dark-mode .select-box select {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .input-box input:focus,
+.dark-mode .select-box select:focus {
+    background-color: rgba(18, 23, 65, 0.493);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .form-select {
+    background-color: rgba(30, 58, 138, 0.5);
+    color: var(--white);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Checkbox */
+.form-check-input {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--blue);
+}
+
+.form-check-label {
+    color: white;
+    cursor: pointer;
+}
+
+/* ========== BOTÕES ========== */
+.btn-primary {
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 18px;
+    font-weight: 500;
+    transition: all var(--transition);
+    padding: 12px 24px;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode - Botões */
+.dark-mode .btn-primary {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* ========== CARDS ========== */
+.card {
+    background-color: var(--bg-card);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Dark mode - Cards */
+.dark-mode .card {
+    background-color: var(--bg-card);
+    border: none;
+    color: var(--text-primary);
+}
+
+/* ========== PERFIL ========== */
+.perfil {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+}
+
+.perfil span {
+    font-size: 40px;
+}
+
+/* ========== BOTÃO VOLTAR ========== */
+.voltar {
+    position: fixed;
+    bottom: 10%;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all var(--transition);
+}
+
+.voltar:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ========== SWEETALERT2 (Dark Mode) ========== */
+.dark-mode .swal2-popup {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.dark-mode .swal2-title {
+    color: var(--white);
+}
+
+.dark-mode .swal2-html-container {
+    color: var(--text-secondary);
+}
+
+.dark-mode .swal2-input,
+.dark-mode .swal2-textarea {
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: 1px solid var(--border-color);
+}
+
+.dark-mode .swal2-confirm {
+    background-color: var(--blue);
+}
+
+.dark-mode .swal2-cancel {
+    background-color: var(--light-blue);
+}
+
+.dark-mode .swal2-icon.swal2-success .swal2-success-ring {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* ========== MENU FLUTUANTE ========== */
+.dark-mode .menu-flutuante {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+/* ========== UTILITÁRIOS ========== */
+.transition-all {
+    transition: all var(--transition);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .text-muted {
+    color: var(--text-secondary);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+    .voltar {
+        display: none;
+    }
+
+    .perfil {
+        right: 20px;
+    }
+}
