@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 60px);
-  /* ← desconta header e footer */
+  min-height: calc(100vh - 60px); /* desconta header e footer */
   padding: 2rem 0;
 }
 

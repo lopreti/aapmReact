@@ -21,7 +21,6 @@ export function alertSucesso(mensagem) {
         title: mensagem,
     });
 }
-
 export async function alertConfirmar(mensagem) {
     const result = await Swal.fire({
         title: mensagem,
