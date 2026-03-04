@@ -21,10 +21,6 @@
     /* Transições */
     --transition: 0.3s ease;
 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
 }
 
 /* ========== DARK MODE ========== */

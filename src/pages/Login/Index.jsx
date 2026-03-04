@@ -61,7 +61,9 @@ export default function Login() {
         <>
             <div className={styles.principalBox}>
                 <div className={styles.entreAqui}>
-                    <span className="material-symbols-outlined">person</span>
+                    <span className="material-symbols-outlined" style={{ fontSize: "60px" }}>
+                        person
+                    </span>
                     <h2>Entre aqui</h2>
                 </div>
 
@@ -77,7 +79,7 @@ export default function Login() {
                         />
                         <label>Email</label>
                     </div>
- 
+
                     { }
                     <div className={`${styles.inputBox} ${styles.inputIcon}`}>
                         <input
@@ -98,7 +100,7 @@ export default function Login() {
 
                     { }
                     <div className={styles.containerOpcoes}>
-                        <div className="form-check">
+                        <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px" }}>
                             <input
                                 type="checkbox"
                                 className={styles.remember}
@@ -108,14 +110,15 @@ export default function Login() {
                             <label className="form-check-label">Lembre de mim</label>
                         </div>
 
-                        <div>  {/* ✅ sem classe por enquanto */}
-                            <a href="./Senha/esqueci-senha/esqueci-senha.html">
-                                <p>Esqueceu a senha?</p>
+                        <div style={{ display: "flex", alignItems: "center", fontSize: "14px" }}>
+                            <a href="/esqueci-senha">
+                                <label>Esqueceu a senha?</label>
                             </a>
                         </div>
+
                     </div>
 
-                    <button type="submit" className={styles.btnPrimary} id="btnEntrar">
+                    <button type="submit" className={`btn btn-primary ${styles.btnPrimary}`} id="btnEntrar">
                         Entrar
                     </button>
                 </form>
