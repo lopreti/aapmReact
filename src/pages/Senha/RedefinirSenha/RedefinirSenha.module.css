@@ -1,0 +1,119 @@
+.principalBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* desconta header e footer */
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.entreAqui {
+  color: white;
+  text-align: center;
+}
+
+.formNovaSenha {
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.inputIcon {
+  position: relative;
+}
+
+.inputBox label {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  color: #dcdcdc;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.inputBox input:focus + label,
+.inputBox input:valid + label {
+  top: -22px;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 6px;
+  border-radius: 6px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-image: url("/src/assets/images/olho.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.iconHide {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-image: url("/src/assets/images/olho-fechado.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btnPrimary {
+  height: 60px;
+  border-radius: 18px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.btnPrimary:disabled {
+  background-color: var(--dark-blue) !important;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.voltar {
+  position: fixed;
+  bottom: 10%;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voltar:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .formNovaSenha {
+    width: 95%;
+  }
+
+  .btnPrimary {
+    font-size: 16px;
+    height: 50px;
+  }
+}

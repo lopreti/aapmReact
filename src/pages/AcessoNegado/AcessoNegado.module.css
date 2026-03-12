@@ -1,0 +1,71 @@
+.principalBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* desconta header e footer */
+  padding: 2rem 0;
+}
+
+.erroCard {
+  width: 90%;
+  max-width: 520px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.erroIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+:global(.dark-mode) .erroIcon {
+  background-color: var(--blue);
+}
+
+.erroIcon span {
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.erroCard h1 {
+  font-size: 2rem;
+  color: #1f2a44;
+  margin-bottom: 16px;
+}
+
+.erroCard p {
+  font-size: 1rem;
+  color: #5b657d;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.btnPrimary {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .erroCard {
+    padding: 36px 24px;
+  }
+
+  .erroCard h1 {
+    font-size: 1.6rem;
+  }
+}

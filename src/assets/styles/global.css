@@ -233,38 +233,6 @@ a:hover {
     background: rgba(255, 255, 255, 0.25);
 }
 
-/* ========== SWEETALERT2 (Dark Mode) ========== */
-.dark-mode .swal2-popup {
-    background-color: var(--dark-blue);
-    color: var(--white);
-}
-
-.dark-mode .swal2-title {
-    color: var(--white);
-}
-
-.dark-mode .swal2-html-container {
-    color: var(--text-secondary);
-}
-
-.dark-mode .swal2-input,
-.dark-mode .swal2-textarea {
-    background-color: var(--light-blue);
-    color: var(--white);
-    border: 1px solid var(--border-color);
-}
-
-.dark-mode .swal2-confirm {
-    background-color: var(--blue);
-}
-
-.dark-mode .swal2-cancel {
-    background-color: var(--light-blue);
-}
-
-.dark-mode .swal2-icon.swal2-success .swal2-success-ring {
-    border-color: rgba(59, 130, 246, 0.3);
-}
 
 /* ========== MENU FLUTUANTE ========== */
 .dark-mode .menu-flutuante {
@@ -295,4 +263,70 @@ a:hover {
     .perfil {
         right: 20px;
     }
+}
+/* ========== SWEETALERT2 ========== */
+.swal-popup {
+    border-radius: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+    background-color: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.swal2-title {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 1rem !important;
+    color: var(--text-primary) !important;
+}
+
+.swal2-html-container {
+    font-family: "Poppins", sans-serif !important;
+    color: var(--text-secondary) !important;
+}
+
+.swal-btn-confirmar {
+    background-color: var(--dark-blue) !important;
+    border-radius: 10px !important;
+    font-family: "Poppins", sans-serif !important;
+    padding: 10px 24px !important;
+}
+
+.swal-btn-confirmar:hover {
+    background-color: var(--blue) !important;
+}
+
+.swal-btn-cancelar {
+    background-color: var(--light-blue) !important;
+    border-radius: 10px !important;
+    font-family: "Poppins", sans-serif !important;
+    padding: 10px 24px !important;
+}
+
+.swal-btn-cancelar:hover {
+    background-color: var(--back-blue) !important;
+}
+
+.dark-mode .swal-popup {
+    background-color: #0A1E52 !important; 
+}
+
+.dark-mode .swal2-title {
+    color: #FFFFFF !important;
+}
+
+.dark-mode .swal2-html-container {
+    color: #CBD5E1 !important;
+}
+
+/* toast dark mode */
+.dark-mode .swal2-toast {
+    background-color: #0A1E52 !important;
+    color: #FFFFFF !important;
+}
+
+.dark-mode .swal2-toast .swal2-title {
+    color: #FFFFFF !important;
+}
+
+.swal2-timer-progress-bar {
+    background-color: var(--blue) !important;
 }

@@ -1,14 +1,14 @@
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Login from "./pages/Login/Index.jsx";
-import Dashboard from "./pages/Admin/Dashboard/Dashboard.jsx";    
+import AppRoutes from "./routes/AppRoutes";
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Dashboard />
+      <AppRoutes />
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
